@@ -1,2 +1,3 @@
-node_modules
-package-lock.json
+# For tour
+tour/node_modules
+tour/package-lock.json

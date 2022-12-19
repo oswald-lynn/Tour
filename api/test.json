@@ -1,0 +1,32 @@
+[
+  {
+    "userId": 1,
+    "division": "Kaya",
+    "famousPlaces": [
+        {
+            "id":1,
+            "name":"Taung Kwe Pagoda",
+            "about":"something",
+            "transportation":"something",
+            "hotels":[
+                {
+                    "name":"abc",
+                    "address":"1234abc",
+                    "phone":["123","456"]
+                },
+                {
+                    "name":"def",
+                    "address":"456def",
+                    "phone":["999","333"]
+                }
+            ]
+        },
+        {
+            "id":2,
+            "name":"Aung Tha Pyae Cave"
+        }
+    ],
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  }
+  
+]

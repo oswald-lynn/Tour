@@ -1,7 +1,8 @@
 import data from "../apis/data";
-import { FETCH_TESTDATA } from "./types";
+import { FETCH_DATA } from "./types";
 
-export const testdata = () => async (dispatch) => {
+export const fetchdata = () => async (dispatch) => {
   const response = await data.get("/data");
-  dispatch({ type: FETCH_TESTDATA, payload: response.data });
+  console.log(response);
+  dispatch({ type: FETCH_DATA, payload: response.data });
 };

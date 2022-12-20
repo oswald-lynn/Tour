@@ -1,1 +1,1 @@
-export const FETCH_TESTDATA = "FETCH_TESTDATA";
+export const FETCH_DATA = "FETCH_DATA";

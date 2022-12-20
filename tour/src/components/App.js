@@ -1,10 +1,10 @@
 import React from "react";
-import TourData from "./TourData";
+import ToursData from "./ToursData";
 
 const App = () => {
   return (
     <>
-      <TourData />
+      <ToursData />
     </>
   );
 };

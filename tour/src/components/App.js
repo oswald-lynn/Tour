@@ -1,10 +1,16 @@
 import React from "react";
-import ToursData from "./ToursData";
+import { Router, Route } from "react-router-dom";
+import ToursData from "./division/ToursData";
+import ToursDivision from "./division/ToursDivision";
+import history from "../history";
 
 const App = () => {
   return (
     <>
-      <ToursData />
+      <Router history={history}>
+        <Route path="/" exact component={ToursData}></Route>
+        <Route path="/:id" exact component={ToursDivision}></Route>
+      </Router>
     </>
   );
 };

@@ -1,25 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Details = (props) => {
   return (
     <div>
-      {/* {console.log(props.famousPlaceDetails)} */}
-
-      {props.famousPlaceDetails.map((info, index) => (
+      <h4> Famous Places:</h4>
+      {props.dd.map((info, index) => (
         <div key={index}>
-          <p> Famous Places:</p>
-          <p>
-            {info.name} <br /> {info.about} <br /> {info.transportation}
-          </p>
-          <p>Hotels</p>
-          <ul>
-            {Object.values(info.hotels).map((hotel, index) => (
-              <li key={index}>
-                Name :{hotel.name} <br /> Address: {hotel.address} <br /> Phone:
-                {hotel.phone}
-              </li>
-            ))}
-          </ul>
+          <p>{info.name}</p>
         </div>
       ))}
     </div>

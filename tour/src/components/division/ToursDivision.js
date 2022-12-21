@@ -1,40 +1,31 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchdata } from "../../actions";
+import Details from "./Details";
 
 class ToursDivision extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
-    console.log("details page", id);
+    //console.log("details page", id);
     this.props.fetchdata(id);
   }
 
   render() {
-    //console.log(state);
     if (!this.props.datas) {
       return <div>Loading...</div>;
     }
 
     const { division, body } = this.props.datas;
-    //const { datas } = this.props.datas;
-    //console.log("Details Page All Data", datas);
-    //const dd = famousPlaces[0].name;
-    //const ee = famousPlaces[1].hotels;
-    //console.log(ee);
-    // const data = this.props.datas;
-    // console.log("Detail Page All Data", data);
-    // {
-    //   Object.keys(data.famousPlaces).map((famousplace, index) => (
-    //     <li key={index}>
-    //       {data.famousPlaces[famousplace].name} -{" "}
-    //       {data.famousPlaces[famousplace].about}
-    //     </li>
-    //   ));
-    // }
+    const data = this.props.datas;
+    //console.log("Details Page All Data", data);
+    const famousPlaceDetails = data.famousPlaces;
+    //console.log("Famous Places Detail", dd);
+
     return (
       <div>
         <h1>{division}</h1>
         <h5>{body}</h5>
+        <Details famousPlaceDetails={famousPlaceDetails} />
       </div>
     );
   }

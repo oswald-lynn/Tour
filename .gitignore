@@ -1,3 +1,7 @@
 # For tour
 tour/node_modules
 tour/package-lock.json
+
+# For expressnode
+expressnode/node_modules
+expressnode/package-lock.json

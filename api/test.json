@@ -267,6 +267,73 @@
         }
       ],
       "body": "Chin State is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north. The population of Chin state is about 478,801 in 2014 census.[4] The capital of the state is Hakha. The state is a mountainous region with few transportation links.Located at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands tall at 3,053 metres, attracting mountaineers and hikers to visit Chin. The state is bordered by the Rakhine State, Bangladesh, Sagaing Region, Magway Division, and India. It is best for tourists to travel to Chin from Bagan all the way to Mindat, the entrance gateway to Chin. Mindat can be reached via a boat ride along the Ayeryarwaddy River, passing Kanma, Pauk, and Kyaukhtu. Tourists can then enjoy a drive up to Mount Victoria, the highest peak of Chin Hills. The roads are cut along mountainsides and alleys, providing tourists with a picturesque view of the state’s scenery. "
+    },
+    {
+      "id": 5,
+      "division": "Yangon",
+      "famousPlaces": [
+        {
+          "id": 1,
+          "name": "Dagon",
+          "about": "Falam Township is mountainous, running eastwest from the foothills above the Bridges include the Manipura river-crossing suspension bridge, 320 feet long by 5 feet wide, linking Bazan Village and Kawdah Village, and the Lonnlwe creek-crossing suspension bridge, 130 feet long by four feet wide, linking Kawdah Village and Kwabwe Village in the township.",
+          "transportation": "something",
+          "hotels": [
+            {
+              "id": 1,
+              "name": "abc",
+              "address": "1234abc",
+              "phone": ["123", "456"]
+            },
+            {
+              "id": 2,
+              "name": "def",
+              "address": "456def",
+              "phone": ["999", "333"]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Hlaing",
+          "about": "Hakha Township  is a township of Hakha District in the Chin State of Burma. It surrounds the city of Hakha, the state capital. It became part of Falam District until Hakha District was formed by the first Chin State Hluttaw emergency meeting No. 2/2012 on 1 June 2012.Situated on the slope of a mountain, the area is built in a U-shape to preserve the natural hilly landscape. At 1,890 m above sea level, the city is mostly covered by thick clouds in cold weathers, making the city appear mysterious and magical. The cool air also provides a refreshing getaway for those who wish to experience a holiday away from the bustling city.",
+          "transportation": "something",
+          "hotels": [
+            {
+              "id": 1,
+              "name": "abc",
+              "address": "1234abc",
+              "phone": ["123", "456"]
+            },
+            {
+              "id": 2,
+              "name": "def",
+              "address": "456def",
+              "phone": ["999", "333"]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Insein",
+          "about": "The Matupi township is located within the western part of Myanmar. The town is situated between latitudes 21.36'57.93 north and longitude 93.26'21.09 east. Matupi township is bordered on all sides: to the east by the Magwe division; to the south by Mindat Township; to the south-west by Paletwa township; to the north-west by Mizoram State, India; and to the north by Thantlang and Hakha townships.",
+          "transportation": "something",
+          "hotels": [
+            {
+              "id": 1,
+              "name": "abc",
+              "address": "1234abc",
+              "phone": ["123", "456"]
+            },
+            {
+              "id": 2,
+              "name": "def",
+              "address": "456def",
+              "phone": ["999", "333"]
+            }
+          ]
+        }
+      ],
+      "body": "Chin State is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north. The population of Chin state is about 478,801 in 2014 census.[4] The capital of the state is Hakha. The state is a mountainous region with few transportation links.Located at the western side of Myanmar with Hakha as its capital, the Chin State/Chin Hills stands tall at 3,053 metres, attracting mountaineers and hikers to visit Chin. The state is bordered by the Rakhine State, Bangladesh, Sagaing Region, Magway Division, and India. It is best for tourists to travel to Chin from Bagan all the way to Mindat, the entrance gateway to Chin. Mindat can be reached via a boat ride along the Ayeryarwaddy River, passing Kanma, Pauk, and Kyaukhtu. Tourists can then enjoy a drive up to Mount Victoria, the highest peak of Chin Hills. The roads are cut along mountainsides and alleys, providing tourists with a picturesque view of the state’s scenery. "
     }
   ]
 }

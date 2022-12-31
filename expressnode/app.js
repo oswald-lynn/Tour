@@ -4,10 +4,21 @@ const app = express();
 const mongoose = require("mongoose");
 mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`);
 
-//const fileUpload = require("express-fileupload");
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:3000" }));
+
+const fileUpload = require("express-fileupload");
+const path = require("path");
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+const { saveFile, saveFiles } = require("./utils/gallery");
 
 app.use(express.json());
 //app.use(fileUpload);
+app.use(
+  fileUpload({
+    debug: false,
+  })
+);
 
 const divisionRoute = require("./routes/division");
 const famousPlaceRoute = require("./routes/famousPlace");
@@ -16,6 +27,15 @@ const hotelRoute = require("./routes/hotel");
 app.use("/division", divisionRoute);
 app.use("/famousplace", famousPlaceRoute);
 app.use("/hotel", hotelRoute);
+
+// const saveFile = async (req, res, next) => {
+//   let file = req.files.file;
+//   console.log(file);
+//   file.mv(`./uploads/${file.name}`);
+// };
+app.post("/gallery", saveFile, (req, res, next) => {
+  res.status(200).json({ msg: "file upload", filename: req.body.image });
+});
 
 // app.get("/", (req, res) => {
 //   console.log("we are here at / route");

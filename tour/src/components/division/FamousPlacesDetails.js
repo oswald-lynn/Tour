@@ -10,9 +10,10 @@ class FamousPlacesDetails extends React.Component {
   }
 
   render() {
-    const data = this.props.famousPlaces;
-    //const famousPlaceDetails = data.famousPlaces;
-    console.log("famousPageError>>", data);
+    //console.log(this.props.datas.famousPlaces);
+    const data = this.props.datas;
+    const famousPlaceDetails = data.famousPlaces;
+    console.log("famousPageError>>", famousPlaceDetails);
     if (!this.props.datas) {
       return <div>Loading...</div>;
     }

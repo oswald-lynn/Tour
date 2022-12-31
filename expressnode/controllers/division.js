@@ -1,13 +1,23 @@
+//const mongoose = require("mongoose");
+//const division = require("../models/division");
 const DB = require("../models/division");
 const Helper = require("../utils/helper");
+//const path = require("path");
 
 const all = async (req, res, next) => {
-  let divisionCats = await DB.find().populate("famousplace");
+  let divisionCats = await DB.find().populate({
+    path: "famousplace",
+    populate: {
+      path: "hotels",
+    },
+  });
   Helper.fMsg(res, "All Category", divisionCats);
   //res.json({ msg: "All Category" });
 };
 
 const post = async (req, res, next) => {
+  //DB: mongoose.Types.ObjectId(req.body.user);
+  //let saveDivision = new DB(req.body);
   let saveDivision = new DB(req.body);
   let result = await saveDivision.save();
   Helper.fMsg(res, "Add Division Name", result);
@@ -16,7 +26,12 @@ const post = async (req, res, next) => {
 
 const get = async (req, res, next) => {
   let id = req.params.id;
-  let division = await DB.findById(id);
+  let division = await DB.findById(id).populate({
+    path: "famousplace",
+    populate: {
+      path: "hotels",
+    },
+  });
   Helper.fMsg(res, "Get single division", division);
   //res.json({ msg: "Single Category", result: req.params.id });
 };

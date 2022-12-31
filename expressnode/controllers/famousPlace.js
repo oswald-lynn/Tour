@@ -19,7 +19,7 @@ const add = async (req, res, next) => {
 
 const get = async (req, res, next) => {
   let id = req.params.id;
-  let place = await DB.findById(id);
+  let place = await DB.findById(id).populate("hotels");
   Helper.fMsg(res, "Get single famous place", place);
   //res.json({ msg: "Get single famous place", result: req.params.id });
 };

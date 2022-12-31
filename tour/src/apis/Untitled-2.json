@@ -1,0 +1,202 @@
+{
+  "con": true,
+  "msg": "All famous place",
+  "result": [
+    {
+      "_id": "63ad46d7667c534f1902de8b",
+      "name": "Taung Kwe Pagoda",
+      "about": "This place good",
+      "transportation": "by car ",
+      "created": "2022-12-29T07:50:47.404Z",
+      "__v": 0,
+      "cat": ["63ad6b22c711e444c640b31c"],
+      "division": {
+        "_id": "63ad6b22c711e444c640b31c",
+        "division": "Kaya",
+        "body": "Kayah is home to nine different ethnic groups, giving ample opportunities  for tourists to discover the cultures and heritages. The most distinctive tribes are Kayah and Kayan",
+        "created": "2022-12-29T10:25:38.196Z",
+        "__v": 0
+      }
+    },
+    {
+      "_id": "63ad474e667c534f1902de8e",
+      "name": "Seven Stages Lake",
+      "about": "On the way to the lake tourists can enjoy the exotic beauty of Loikaws countryside",
+      "transportation": "by car ",
+      "created": "2022-12-29T07:52:46.665Z",
+      "__v": 0,
+      "division": {
+        "_id": "63ad6b22c711e444c640b31c",
+        "division": "Kaya",
+        "body": "Kayah is home to nine different ethnic groups, giving ample opportunities  for tourists to discover the cultures and heritages. The most distinctive tribes are Kayah and Kayan",
+        "created": "2022-12-29T10:25:38.196Z",
+        "__v": 0
+      }
+    },
+    {
+      "_id": "63ad47cf667c534f1902de91",
+      "name": "Aung Thapyay Cave",
+      "about": "The cave that houses 10 sitting Buddha statues can be found near Htee Se Kha Waterfall. ",
+      "transportation": "something",
+      "created": "2022-12-29T07:54:55.009Z",
+      "__v": 0,
+      "division": {
+        "_id": "63ad6b22c711e444c640b31c",
+        "division": "Kaya",
+        "body": "Kayah is home to nine different ethnic groups, giving ample opportunities  for tourists to discover the cultures and heritages. The most distinctive tribes are Kayah and Kayan",
+        "created": "2022-12-29T10:25:38.196Z",
+        "__v": 0
+      }
+    },
+    {
+      "_id": "63ad4818667c534f1902de94",
+      "name": "Bayin Nyi Cave",
+      "about": "Bayin Nyi Cave is located on the northwestern bank of Thanlwin River.",
+      "transportation": "something",
+      "created": "2022-12-29T07:56:08.152Z",
+      "__v": 0,
+      "division": {
+        "_id": "63ad6c97c5537c34fd2e3e1f",
+        "division": "Kayin",
+        "body": "Kayin State provides the variety of a mountainous terrain amidst the beaches and seas of Southern Myanmar",
+        "created": "2022-12-29T10:31:51.462Z",
+        "__v": 0
+      }
+    },
+    {
+      "_id": "63ad488c667c534f1902de97",
+      "name": "Mt.Zwegabin",
+      "about": "Mt. Zwegabin at 722 metres height is one of the most sacred mountains in Myanmar. ",
+      "transportation": "walking",
+      "created": "2022-12-29T07:58:04.863Z",
+      "__v": 0,
+      "division": {
+        "_id": "63ad6c97c5537c34fd2e3e1f",
+        "division": "Kayin",
+        "body": "Kayin State provides the variety of a mountainous terrain amidst the beaches and seas of Southern Myanmar",
+        "created": "2022-12-29T10:31:51.462Z",
+        "__v": 0
+      }
+    },
+    {
+      "_id": "63ad772a583382cd70d00af4",
+      "division": {
+        "_id": "63ad6c97c5537c34fd2e3e1f",
+        "division": "Kayin",
+        "body": "Kayin State provides the variety of a mountainous terrain amidst the beaches and seas of Southern Myanmar",
+        "created": "2022-12-29T10:31:51.462Z",
+        "__v": 0
+      },
+      "name": "ThanDaung",
+      "about": "Thaundaung was developed as a hill station during colonial times by the British. It is a beautiful hill station important for coffee, tea and fruit production. It is quaint hill town offering few days of peace to visitors. Tourists can relax, unwind and enjoy the greenery of the surrounding area. The view of sunrise between the hills is a memorable one.",
+      "transportation": "by train",
+      "created": "2022-12-29T11:16:58.898Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad78d547a36770ff09fad0",
+      "division": {
+        "_id": "63ad70a6d2256a7e9b1219bf",
+        "division": "Shan",
+        "body": "Shan State also known by the endonyms Shanland, Muang Tai, and Tailong, is a state of Myanmar",
+        "created": "2022-12-29T10:49:10.159Z",
+        "__v": 0
+      },
+      "name": "Pindaya Cave",
+      "about": "The cave is filled with an array of Buddhist statues and images of all materials, shapes, and sizes. There are more than 8,094 statues in the cave, including statues that are centuries old and those that are recently placed there by other Buddhists. As the cave serves as a religious site for monks, the statues and images are to be treated with respect.",
+      "transportation": "by car",
+      "created": "2022-12-29T11:24:05.670Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad790e47a36770ff09fad4",
+      "division": {
+        "_id": "63ad70a6d2256a7e9b1219bf",
+        "division": "Shan",
+        "body": "Shan State also known by the endonyms Shanland, Muang Tai, and Tailong, is a state of Myanmar",
+        "created": "2022-12-29T10:49:10.159Z",
+        "__v": 0
+      },
+      "name": "Htam San Cave",
+      "about": "Situated 46 kilometres from Taunggyi at 1,800 metres above sea level, this magnificent limestone cave was found by a young monk. Standing at 10 metres high, the cave showcases the beautiful formation of stalactites and stalagmites that take millions of years to form. This rare beauty is greatly admired by tourists and cave-explorers from all over the world.",
+      "transportation": "by car",
+      "created": "2022-12-29T11:25:02.924Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad792947a36770ff09fad6",
+      "division": {
+        "_id": "63ad70a6d2256a7e9b1219bf",
+        "division": "Shan",
+        "body": "Shan State also known by the endonyms Shanland, Muang Tai, and Tailong, is a state of Myanmar",
+        "created": "2022-12-29T10:49:10.159Z",
+        "__v": 0
+      },
+      "name": "Taunggyi",
+      "about": "The capital city of Shan has a comfortable, peaceful environment, making it a great spot for tourists to spend some nights there. Taunggyi is busiest and packed with people when it comes to festive seasons. Tourists can join in the festivals or visit some of the pagodas found in the city. The local market offers a variety of items that reflect the culture of Shan.",
+      "transportation": "something",
+      "created": "2022-12-29T11:25:29.843Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad798947a36770ff09fada",
+      "division": {
+        "_id": "63ad70d3d2256a7e9b1219c1",
+        "division": "Chin",
+        "body": "Chin State is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north",
+        "created": "2022-12-29T10:49:55.852Z",
+        "__v": 0
+      },
+      "name": "Falam",
+      "about": "Falam Township is mountainous, running eastwest from the foothills above the Bridges include the Manipura river-crossing suspension bridge, 320 feet long by 5 feet wide, linking Bazan Village and Kawdah Village, and the Lonnlwe creek-crossing suspension bridge, 130 feet long by four feet wide, linking Kawdah Village and Kwabwe Village in the township.",
+      "transportation": "something",
+      "created": "2022-12-29T11:27:05.124Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad79bb47a36770ff09fadc",
+      "division": {
+        "_id": "63ad70d3d2256a7e9b1219c1",
+        "division": "Chin",
+        "body": "Chin State is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north",
+        "created": "2022-12-29T10:49:55.852Z",
+        "__v": 0
+      },
+      "name": "Hakha",
+      "about": "Hakha Township  is a township of Hakha District in the Chin State of Burma. It surrounds the city of Hakha, the state capital. It became part of Falam District until Hakha District was formed by the first Chin State Hluttaw emergency meeting No. 2/2012 on 1 June 2012.Situated on the slope of a mountain, the area is built in a U-shape to preserve the natural hilly landscape. At 1,890 m above sea level, the city is mostly covered by thick clouds in cold weathers, making the city appear mysterious and magical. The cool air also provides a refreshing getaway for those who wish to experience a holiday away from the bustling city.",
+      "transportation": "something",
+      "created": "2022-12-29T11:27:55.387Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad79d747a36770ff09fade",
+      "division": {
+        "_id": "63ad70d3d2256a7e9b1219c1",
+        "division": "Chin",
+        "body": "Chin State is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north",
+        "created": "2022-12-29T10:49:55.852Z",
+        "__v": 0
+      },
+      "name": "Matupi",
+      "about": "The Matupi township is located within the western part of Myanmar. The town is situated between latitudes 21.36'57.93 north and longitude 93.26'21.09 east. Matupi township is bordered on all sides: to the east by the Magwe division; to the south by Mindat Township; to the south-west by Paletwa township; to the north-west by Mizoram State, India; and to the north by Thantlang and Hakha townships.",
+      "transportation": "something",
+      "created": "2022-12-29T11:28:23.476Z",
+      "__v": 0
+    },
+    {
+      "_id": "63ad7c6e47a36770ff09fae2",
+      "division": {
+        "_id": "63ad70f0d2256a7e9b1219c3",
+        "division": "Mon",
+        "body": "Mon State also known by the endonyms Shanland, Muang Tai, and Tailong, is a state of Myanmar",
+        "created": "2022-12-29T10:50:24.377Z",
+        "__v": 0
+      },
+      "name": "Mawlamyine",
+      "about": "The first capital of British Burma, the city is currently the capital and largest city of Mon State and the main trading centre and seaport in south eastern Myanmar",
+      "transportation": "by ship",
+      "created": "2022-12-29T11:39:26.961Z",
+      "__v": 0
+    }
+  ]
+}

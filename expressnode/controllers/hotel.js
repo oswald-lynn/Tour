@@ -1,5 +1,5 @@
 const DB = require("../models/hotel");
-const famousplaceDb = require("../models/famousPlace");
+const famousplaceDB = require("../models/famousPlace");
 const Helper = require("../utils/helper");
 
 const all = async (req, res, next) => {
@@ -15,7 +15,7 @@ const all = async (req, res, next) => {
 const add = async (req, res, next) => {
   let hotels = new DB(req.body);
   let result = await hotels.save();
-  await famousplaceDb.findByIdAndUpdate(req.body.famousplace, {
+  await famousplaceDB.findByIdAndUpdate(req.body.famousplace, {
     $push: { hotels: result._id },
   });
   Helper.fMsg(res, "Add Hotel", result);

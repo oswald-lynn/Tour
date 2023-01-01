@@ -5,3 +5,10 @@ tour/package-lock.json
 # For expressnode
 expressnode/node_modules
 expressnode/package-lock.json
+expressnode/.env
+
+# For expressnode
+node_modules
+package-lock.json
+.env
+

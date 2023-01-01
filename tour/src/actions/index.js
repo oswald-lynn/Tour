@@ -1,17 +1,20 @@
 import data from "../apis/data";
-import { FETCH_DATAS, FETCH_DATA, FETCH_FAMOUSPLACE } from "./types";
-import _ from "lodash";
+import {
+  FETCH_DIVISION,
+  FETCH_SINGLEDIVISION,
+  FETCH_FAMOUSPLACE,
+} from "./types";
 
-export const fetchdatas = () => async (dispatch, getState) => {
+export const fetchDivision = () => async (dispatch) => {
   const response = await data.get("/division");
-  console.log("Actions >>", response.data);
-  dispatch({ type: FETCH_DATAS, payload: response.data.result });
+  //console.log("Actions >>", response.data);
+  dispatch({ type: FETCH_DIVISION, payload: response.data.result });
 };
 
-export const fetchdata = (_id) => async (dispatch) => {
+export const fetchSingleDivision = (_id) => async (dispatch) => {
   const response = await data.get(`/division/${_id}`);
   console.log("click >>", response);
-  dispatch({ type: FETCH_DATA, payload: response.data.result });
+  dispatch({ type: FETCH_SINGLEDIVISION, payload: response.data.result });
 };
 
 export const fetchFamousPlace = (_id) => async (dispatch) => {

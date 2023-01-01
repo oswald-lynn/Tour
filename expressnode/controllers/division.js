@@ -1,8 +1,5 @@
-//const mongoose = require("mongoose");
-//const division = require("../models/division");
 const DB = require("../models/division");
 const Helper = require("../utils/helper");
-//const path = require("path");
 
 const all = async (req, res, next) => {
   let divisionCats = await DB.find().populate({
@@ -16,8 +13,6 @@ const all = async (req, res, next) => {
 };
 
 const post = async (req, res, next) => {
-  //DB: mongoose.Types.ObjectId(req.body.user);
-  //let saveDivision = new DB(req.body);
   let saveDivision = new DB(req.body);
   let result = await saveDivision.save();
   Helper.fMsg(res, "Add Division Name", result);

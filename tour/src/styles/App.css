@@ -1,3 +1,18 @@
+h1,
+h2 {
+  text-transform: uppercase;
+}
+.text {
+  text-align: justify;
+}
 .img {
-  width: 355px;
+  height: 310px;
+}
+.card {
+  margin-bottom: 2rem;
+}
+.middle {
+  border-left: 1px solid #ddd;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }

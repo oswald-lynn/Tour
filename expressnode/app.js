@@ -28,18 +28,13 @@ app.use("/division", divisionRoute);
 app.use("/famousplace", famousPlaceRoute);
 app.use("/hotel", hotelRoute);
 
-// const saveFile = async (req, res, next) => {
-//   let file = req.files.file;
-//   console.log(file);
-//   file.mv(`./uploads/${file.name}`);
-// };
 app.post("/gallery", saveFile, (req, res, next) => {
   res.status(200).json({ msg: "file upload", filename: req.body.image });
 });
 
-// app.get("/", (req, res) => {
-//   console.log("we are here at / route");
-// });
+app.get("/", (req, res) => {
+  console.log("we are here at / route");
+});
 
 app.get("*", (req, res) => {
   res.json({ msg: "No found Route" });

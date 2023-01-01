@@ -10,20 +10,21 @@ class ToursData extends React.Component {
   componentDidMount() {
     this.props.fetchdatas();
   }
+  renderList() {}
 
   render() {
-    //console.log("Rendering Data>>", this.props.image);
-    const { datas } = this.props;
+    console.log("Rendering Data>>", this.props);
+    const { divisions } = this.props;
     //console.log("Rendering Data >>", datas);
     if (
-      datas.length === 0 ||
-      datas === "" ||
-      datas === undefined ||
-      datas === null
+      divisions.length === 0 ||
+      divisions === "" ||
+      divisions === undefined ||
+      divisions === null
     ) {
       return <div> Loading ... </div>;
     } else {
-      const division = datas[0];
+      //const division = d[0];
       //console.log("Image test", division);
       //const famousPlaces = division.famousplace;
       //console.log("Famous Place 1 >>", famousPlaces);
@@ -31,7 +32,7 @@ class ToursData extends React.Component {
       //const famousPlaces1 = division[1].famousplace;
       //console.log("Famous Place >>", famousPlaces1);
 
-      const dataDivision = division.map((data) => {
+      const dataDivision = divisions.map((data) => {
         return (
           <div key={data._id}>
             <Link to={`division/${data._id}`}>
@@ -56,7 +57,7 @@ class ToursData extends React.Component {
 
 const mapStateToProps = (state) => {
   console.log("ToursData Page>>", state);
-  return { datas: Object.values(state.datas) };
+  return { divisions: state.datasReducer.divisions };
 };
 
 export default connect(mapStateToProps, { fetchdatas })(ToursData);

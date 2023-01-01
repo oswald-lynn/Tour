@@ -1,26 +1,27 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchdetail } from "../../actions";
+import { fetchFamousPlace } from "../../actions";
 
-class FamousPlacesDetails extends React.Component {
+class FamousPlace extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     //console.log("Famous Place page", id);
-    this.props.fetchdetail(id);
+    this.props.fetchFamousPlace(id);
   }
 
   render() {
     //console.log(this.props.datas.famousPlaces);
-    const data = this.props.datas;
-    const famousPlaceDetails = data.famousPlaces;
-    console.log("famousPageError>>", famousPlaceDetails);
-    if (!this.props.datas) {
+    const { famousPlace } = this.props;
+    console.log("famousPageError>>", famousPlace);
+
+    if (!famousPlace) {
       return <div>Loading...</div>;
     }
 
     return (
       <div>
         <h2>Famous Page Detail</h2>
+        {JSON.stringify(famousPlace)}
       </div>
     );
   }
@@ -28,7 +29,7 @@ class FamousPlacesDetails extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   console.log("Famoust Page Data", state);
-  return { datas: state.datas[ownProps.match.params.id] };
+  return { famousPlace: state.datasReducer.famousPlace };
 };
 
-export default connect(mapStateToProps, { fetchdetail })(FamousPlacesDetails);
+export default connect(mapStateToProps, { fetchFamousPlace })(FamousPlace);

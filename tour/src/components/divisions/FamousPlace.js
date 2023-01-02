@@ -18,19 +18,17 @@ class FamousPlace extends React.Component {
       return <div>Loading...</div>;
     } else {
       const hotels = famousPlace.hotels;
-      console.log(hotels);
-
-      // const hotelDetails = hotels.map((hotel) => {
-      //   <>
-      //     <div key={hotel._id}>
-      //       <strong>{hotel.name}</strong>
-      //     </div>
-      //     <div>{hotel.address}</div>
-      //   </>;
-      // });
       return (
         <div>
           <h2>Famous Page Detail</h2>
+          {
+          hotels.map((hotel)=>
+          <div>
+            <div>
+              {hotel.name}
+            </div>
+          </div>)
+          }
           {/* {hotelDetails} */}
           {/* {JSON.stringify(famousPlace)} */}
         </div>

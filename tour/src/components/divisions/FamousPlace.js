@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchFamousPlace } from "../../actions";
-import { Col, Row } from "antd";
+import { Col, Row, Collapse } from "antd";
+const { Panel } = Collapse;
 
 class FamousPlace extends React.Component {
   componentDidMount() {
@@ -18,27 +19,16 @@ class FamousPlace extends React.Component {
     if (!famousPlace) {
       return <div>Loading...</div>;
     } else {
-      const hotels = famousPlace?.hotels?.map((place) => {
-        return (
-          <>
-            <div key={place._id}>
-              Name:{place.name}
-              Address:{place.address}
-              Phone:{place.phone}
-            </div>
-          </>
-        );
-      });
       return (
         <>
           <Row>
-            <Col span={24} className="about">
+            <Col md={22} lg={24} className="about">
               <h2>Famous Page Detail</h2>
               <h3>{famousPlace.name}</h3>
             </Col>
           </Row>
           <Row>
-            <Col span={12} className="about text">
+            <Col md={10} lg={12} className="about text">
               <div>
                 <h3>About</h3>
                 {famousPlace.about}
@@ -48,13 +38,20 @@ class FamousPlace extends React.Component {
                 {famousPlace.transportation}
               </div>
             </Col>
-            <Col span={12} className="middle">
+            <Col md={10} lg={12} className="middle">
               <div>
                 <h3> Hotels </h3>
-                {hotels}
+                <Collapse accordion>
+                  {famousPlace?.hotels?.map((hotel) => (
+                    <Panel header={hotel.name} key={hotel._id}>
+                      <b>Address</b>: {hotel.address} <br />
+                      <b>Phone</b> :{hotel.phone}
+                    </Panel>
+                  ))}
+                </Collapse>
               </div>
             </Col>
-          {/* {JSON.stringify(famousPlace)} */}
+          </Row>
         </>
       );
     }
@@ -62,7 +59,7 @@ class FamousPlace extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  //console.log("Famoust Page Data", state);
+  console.log("Famoust Page Data", state);
 
   return {
     singleDivision: state.divisionReducer.singleDivision,

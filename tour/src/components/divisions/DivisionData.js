@@ -27,7 +27,7 @@ class DivisionData extends React.Component {
           <div className="site-card-border-less-wrapper">
             <Row gutter={16}>
               {this.props.divisions.map((data) => (
-                <Col span={6} key={data._id}>
+                <Col md={4} lg={6} key={data._id}>
                   <Link to={`division/${data._id}`}>
                     <Card
                       className="card"

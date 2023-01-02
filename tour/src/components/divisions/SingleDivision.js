@@ -20,7 +20,7 @@ class SingleDivision extends React.Component {
     } else {
       const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
         <>
-          <div key={famousplace.id}>
+          <div key={famousplace._id}>
             <div>
               <Link to={`/famousplaces/${famousplace._id}`}>
                 <strong>{famousplace.name}</strong>
@@ -34,20 +34,21 @@ class SingleDivision extends React.Component {
       return (
         <>
           <Row key={singleDivision._id}>
-            <Col span={24}>
+            <Col sm={20} md={22} lg={24}>
               <h1>{singleDivision.division}</h1>
             </Col>
           </Row>
           <Row>
-            <Col span={8}>
+            <Col sm={4} md={6} lg={8}>
               {
                 <img
                   src={`http://localhost:3001/uploads/${singleDivision.image}`}
                   className="img"
+                  alt={singleDivision.image}
                 />
               }
             </Col>
-            <Col span={16} className="middle text">
+            <Col md={14} lg={16} className="middle text">
               <h2> About </h2>
               <div>{singleDivision.body}</div>
               <h2>Famous Places</h2>

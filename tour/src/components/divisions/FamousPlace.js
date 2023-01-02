@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchFamousPlace } from "../../actions";
+import { Col, Row } from "antd";
 
 class FamousPlace extends React.Component {
   componentDidMount() {
@@ -53,9 +54,8 @@ class FamousPlace extends React.Component {
                 {hotels}
               </div>
             </Col>
-          </Row
           {/* {JSON.stringify(famousPlace)} */}
-        </div>
+        </>
       );
     }
   }

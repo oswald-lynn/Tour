@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchFamousPlace } from "../../actions";
-import { Col, Row } from "antd";
 
 class FamousPlace extends React.Component {
   componentDidMount() {
@@ -18,6 +17,8 @@ class FamousPlace extends React.Component {
     if (!famousPlace) {
       return <div>Loading...</div>;
     } else {
+      //   const places = famousPlace;
+      //   console.log("Famous Details", places);
       const hotels = famousPlace?.hotels?.map((place) => {
         return (
           <>
@@ -29,35 +30,34 @@ class FamousPlace extends React.Component {
           </>
         );
       });
+
+      // const hotelDetails = hotels.map((hotel) => {
+      //   <>
+      //     <div key={hotel._id}>
+      //       <strong>{hotel.name}</strong>
+      //     </div>
+      //     <div>{hotel.address}</div>
+      //   </>;
+      // });
       return (
-        <>
-          <Row>
-            <Col span={24} className="about">
-              <h2>Famous Page Detail</h2>
-              <h3>{famousPlace.name}</h3>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={12} className="about text">
-              <div>
-                <h3>About</h3>
-                {famousPlace.about}
-              </div>
-              <div>
-                <h3>Transportation</h3>
-                {famousPlace.transportation}
-              </div>
-            </Col>
-            <Col span={12} className="middle">
-              <div>
-                <h3> Hotels </h3>
-                {hotels}
-              </div>
-            </Col>
-          </Row>
+        <div>
+          <h2>Famous Page Detail</h2>
+          <h3>{famousPlace.name}</h3>
+          <div>
+            <h3>About</h3>
+            {famousPlace.about}
+          </div>
+          <div>
+            <h3>Transportation</h3>
+            {famousPlace.transportation}
+          </div>
+          <div>
+            <h3> Hotels </h3>
+            {hotels}
+          </div>
 
           {/* {JSON.stringify(famousPlace)} */}
-        </>
+        </div>
       );
     }
   }

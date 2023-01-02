@@ -13,12 +13,12 @@ export const fetchDivision = () => async (dispatch) => {
 
 export const fetchSingleDivision = (_id) => async (dispatch) => {
   const response = await data.get(`/division/${_id}`);
-  console.log("click >>", response);
+  //console.log("click >>", response);
   dispatch({ type: FETCH_SINGLEDIVISION, payload: response.data.result });
 };
 
 export const fetchFamousPlace = (_id) => async (dispatch) => {
   const response = await data.get(`/famousplace/${_id}`);
-  console.log("FamousPlace >>", response);
+  //console.log("FamousPlace >>", response);
   dispatch({ type: FETCH_FAMOUSPLACE, payload: response.data.result });
 };

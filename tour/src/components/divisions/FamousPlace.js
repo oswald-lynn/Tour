@@ -17,19 +17,43 @@ class FamousPlace extends React.Component {
     if (!famousPlace) {
       return <div>Loading...</div>;
     } else {
-      const hotels = famousPlace.hotels;
-      return (
-        <div>
-          <h2>Famous Page Detail</h2>
-          {
-          hotels.map((hotel)=>
-          <div>
-            <div>
-              {hotel.name}
+      const hotels = famousPlace?.hotels?.map((place) => {
+        return (
+          <>
+            <div key={place._id}>
+              <div>Name:{place.name}</div>
+              <div>Address:{place.address}</div>
+              <div>Phone:{place.phone}</div>
             </div>
-          </div>)
-          }
-          {/* {hotelDetails} */}
+          </>
+        );
+      });
+      return (
+        <>
+          <Row>
+            <Col span={24} className="about">
+              <h2>Famous Page Detail</h2>
+              <h3>{famousPlace.name}</h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col span={12} className="about text">
+              <div>
+                <h3>About</h3>
+                {famousPlace.about}
+              </div>
+              <div>
+                <h3>Transportation</h3>
+                {famousPlace.transportation}
+              </div>
+            </Col>
+            <Col span={12} className="middle">
+              <div>
+                <h3> Hotels </h3>
+                {hotels}
+              </div>
+            </Col>
+          </Row
           {/* {JSON.stringify(famousPlace)} */}
         </div>
       );

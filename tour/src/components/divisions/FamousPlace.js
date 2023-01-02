@@ -22,9 +22,9 @@ class FamousPlace extends React.Component {
         return (
           <>
             <div key={place._id}>
-              <div>Name:{place.name}</div>
-              <div>Address:{place.address}</div>
-              <div>Phone:{place.phone}</div>
+              Name:{place.name}
+              Address:{place.address}
+              Phone:{place.phone}
             </div>
           </>
         );

@@ -20,7 +20,7 @@ class SingleDivision extends React.Component {
     } else {
       const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
         <>
-          <div key={famousplace._id}>
+          <div key={famousplace.id}>
             <div>
               <Link to={`/famousplaces/${famousplace._id}`}>
                 <strong>{famousplace.name}</strong>
@@ -33,7 +33,7 @@ class SingleDivision extends React.Component {
       // return <>{JSON.stringify(singleDivision)}
       return (
         <>
-          <Row>
+          <Row key={singleDivision._id}>
             <Col span={24}>
               <h1>{singleDivision.division}</h1>
             </Col>

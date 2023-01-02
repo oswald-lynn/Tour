@@ -54,8 +54,6 @@ class FamousPlace extends React.Component {
                 {hotels}
               </div>
             </Col>
-          </Row>
-
           {/* {JSON.stringify(famousPlace)} */}
         </>
       );

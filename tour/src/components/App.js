@@ -1,18 +1,21 @@
 import React from "react";
-import { Router, Route } from "react-router-dom";
+//import { Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import DivisionData from "./divisions/DivisionData";
 import SingleDivision from "./divisions/SingleDivision";
-import history from "../history";
+//import history from "../history";
 import FamousPlace from "./divisions/FamousPlace";
+import Errorpage from "./Errorpage";
 
 const App = () => {
   return (
     <>
-      <Router history={history}>
-        <Route path="/" exact component={DivisionData}></Route>
-        <Route path="/division/:id" exact component={SingleDivision}></Route>
-        <Route path="/famousplaces/:id" exact component={FamousPlace}></Route>
-      </Router>
+      <Routes>
+        <Route path="/" element={<DivisionData />}></Route>
+        <Route path="/division/:id" element={<SingleDivision />}></Route>
+        <Route path="/famousplaces/:id" element={<FamousPlace />}></Route>
+        <Route path="*" element={<Errorpage />}></Route>
+      </Routes>
     </>
   );
 };

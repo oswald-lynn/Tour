@@ -1,14 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchSingleDivision } from "../../actions";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Col, Row } from "antd";
 
 class SingleDivision extends React.Component {
   componentDidMount() {
+    const params = useParams();
     const { id } = this.props.match.params;
-    //console.log("details page", id);
     this.props.fetchSingleDivision(id);
+
+    //this.props.fetchSingleDivision();
+    //console.log("Single Division details page", id);
   }
 
   render() {
@@ -20,13 +23,13 @@ class SingleDivision extends React.Component {
     } else {
       const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
         <>
-          <div key={famousplace._id}>
+          <div key={famousplace.id}>
             <div>
               <Link to={`/famousplaces/${famousplace._id}`}>
                 <strong>{famousplace.name}</strong>
               </Link>
+              <p>{famousplace.about}</p>
             </div>
-            <div>{famousplace.about}</div>
           </div>
         </>
       ));

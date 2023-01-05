@@ -22,3 +22,6 @@ h2 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.errtext {
+  text-align: center;
+}

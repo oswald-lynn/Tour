@@ -13,7 +13,7 @@ export const fetchDivision = () => async (dispatch) => {
 
 export const fetchSingleDivision = (_id) => async (dispatch) => {
   const response = await data.get(`/division/${_id}`);
-  //console.log("click >>", response);
+  console.log("click >>", response);
   dispatch({ type: FETCH_SINGLEDIVISION, payload: response.data.result });
 };
 

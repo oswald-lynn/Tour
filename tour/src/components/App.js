@@ -1,9 +1,7 @@
 import React from "react";
-//import { Router, Route } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import DivisionData from "./divisions/DivisionData";
 import SingleDivision from "./divisions/SingleDivision";
-//import history from "../history";
 import FamousPlace from "./divisions/FamousPlace";
 import Errorpage from "./Errorpage";
 

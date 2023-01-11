@@ -1,42 +1,42 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { fetchSingleDivision } from "../../actions";
 import { useParams, Link } from "react-router-dom";
 import { Col, Row } from "antd";
-import { useDispatch, useSelector } from "react-redux";
 
 const SingleDivision = () => {
   const [singleDivision, setSingleDivision] = useState({});
   const { id } = useParams();
-  const divisions = useSelector((state) => state.dataDivisions.singleDivision);
 
-  console.log("Reducer Data ", divisions);
-  const dispatch = useDispatch;
-
+  const loadsSingleDivision = async () => {
+    const response = await fetch(`http://localhost:3001/division/${id}`);
+    const resData = await response.json();
+    if (resData.con) {
+      setSingleDivision(resData.result);
+      console.log(resData);
+    } else {
+      console.log(resData);
+    }
+  };
   useEffect(() => {
-    const loadsSingleDivision = async () => {
-      dispatch(fetchSingleDivision(id)(divisions));
-      //setSingleDivision(divisions(id));
-    };
     loadsSingleDivision();
   }, []);
 
-  // const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
-  //   <>
-  //     <div key={famousplace.id}>
-  //       <div>
-  //         <Link to={`/famousplaces/${famousplace._id}`}>
-  //           <strong>{famousplace.name}</strong>
-  //         </Link>
-  //         <p>{famousplace.about}</p>
-  //       </div>
-  //     </div>
-  //   </>
-  // ));
+  const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
+    <>
+      <div key={famousplace.id}>
+        <div>
+          <Link to={`/famousplaces/${famousplace._id}`}>
+            <strong>{famousplace.name}</strong>
+          </Link>
+          <p>{famousplace.about}</p>
+        </div>
+      </div>
+    </>
+  ));
 
   return (
     <>
-      {/* <Row key={singleDivision._id}>
+      <Row key={singleDivision._id}>
         <Col sm={20} md={22} lg={24}>
           <h1>{singleDivision.division}</h1>
         </Col>
@@ -57,7 +57,7 @@ const SingleDivision = () => {
           <h2>Famous Places</h2>
           <div>{famousPlaces}</div>
         </Col>
-      </Row> */}
+      </Row>
     </>
   );
 };

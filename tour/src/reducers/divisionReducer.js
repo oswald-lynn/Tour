@@ -12,7 +12,7 @@ const initialState = {
 };
 
 export const divisionReducer = (state = initialState, action) => {
-  //console.log("Reducer >>", action.payload);
+  console.log("Reducer >>", action.payload);
   switch (action.type) {
     case FETCH_DIVISION:
       //return { ...state, ..._.mapKeys(action.payload, "id") };

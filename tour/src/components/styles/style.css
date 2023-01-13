@@ -1,3 +1,10 @@
+body {
+  background-color: antiquewhite;
+}
+.textError {
+  text-align: center;
+  padding-top: 3rem;
+}
 h1,
 h2 {
   text-transform: uppercase;

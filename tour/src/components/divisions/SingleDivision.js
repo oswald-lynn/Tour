@@ -1,48 +1,35 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { fetchSingleDivision } from "../../actions";
-import { useParams, Link } from "react-router-dom";
-import { Col, Row } from "antd";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchSingleDivision } from "../actions";
+import { Col, Row } from "antd";
+import { Link } from "react-router-dom";
 
 const SingleDivision = () => {
-  const [singleDivision, setSingleDivision] = useState({});
   const { id } = useParams();
-  const divisions = useSelector((state) => state.dataDivisions.singleDivision);
-
-  console.log("Reducer Data ", divisions);
-  const dispatch = useDispatch;
+  const singleDivision = useSelector(
+    (state) => state.dataDivision.singleDivision
+  );
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const loadsSingleDivision = async () => {
-      dispatch(fetchSingleDivision(id)(divisions));
-      //setSingleDivision(divisions(id));
-    };
-    loadsSingleDivision();
-  }, []);
+    dispatch(fetchSingleDivision(id));
+  }, [id]);
 
-  // const famousPlaces = singleDivision?.famousplace?.map((famousplace) => (
-  //   <>
-  //     <div key={famousplace.id}>
-  //       <div>
-  //         <Link to={`/famousplaces/${famousplace._id}`}>
-  //           <strong>{famousplace.name}</strong>
-  //         </Link>
-  //         <p>{famousplace.about}</p>
-  //       </div>
-  //     </div>
-  //   </>
-  // ));
+  if (!singleDivision) {
+    return "Loading ...";
+  }
 
   return (
     <>
-      {/* <Row key={singleDivision._id}>
-        <Col sm={20} md={22} lg={24}>
+      <h2> Division Details !!</h2>
+      <Row key={singleDivision._id}>
+        <Col span={24}>
           <h1>{singleDivision.division}</h1>
         </Col>
       </Row>
       <Row>
-        <Col sm={4} md={6} lg={8}>
+        <Col span={8}>
           {
             <img
               src={`http://localhost:3001/uploads/${singleDivision.image}`}
@@ -51,13 +38,23 @@ const SingleDivision = () => {
             />
           }
         </Col>
-        <Col md={14} lg={16} className="middle text">
+        <Col span={16} className="text">
           <h2> About </h2>
           <div>{singleDivision.body}</div>
           <h2>Famous Places</h2>
-          <div>{famousPlaces}</div>
+          {singleDivision.famousplace &&
+            singleDivision.famousplace.map((singleplace) => (
+              <div key={singleplace._id}>
+                <Link to={`/famousplace/${singleplace._id}`}>
+                  <p>
+                    <strong>{singleplace.name}</strong>
+                  </p>
+                </Link>
+                <p>{singleplace.about}</p>
+              </div>
+            ))}
         </Col>
-      </Row> */}
+      </Row>
     </>
   );
 };

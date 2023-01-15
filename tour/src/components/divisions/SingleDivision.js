@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchSingleDivision } from "../actions";
 import { Col, Row } from "antd";
-import { Link } from "react-router-dom";
 
 const SingleDivision = () => {
   const { id } = useParams();
@@ -14,7 +13,7 @@ const SingleDivision = () => {
 
   useEffect(() => {
     dispatch(fetchSingleDivision(id));
-  }, [id]);
+  }, [dispatch]);
 
   if (!singleDivision) {
     return "Loading ...";
@@ -38,7 +37,7 @@ const SingleDivision = () => {
             />
           }
         </Col>
-        <Col span={16} className="text">
+        <Col span={16} className="middle text">
           <h2> About </h2>
           <div>{singleDivision.body}</div>
           <h2>Famous Places</h2>

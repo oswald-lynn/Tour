@@ -7,25 +7,22 @@ const { Panel } = Collapse;
 
 const FamousPlace = () => {
   const { id } = useParams();
-  const famousPlace = useSelector(
-    (state) => state.dataDivision.singleDivision.famousPlace
-  );
+  const famousPlace = useSelector((state) => state.dataDivision.famousPlace);
   //console.log(famousPlace);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchFamousPlace(id));
-  }, []);
+  }, [dispatch]);
 
   if (!famousPlace) {
     return "Loading ...";
   }
   return (
     <div>
-      {id}
       <Row key={famousPlace._id}>
         <Col md={22} lg={24} className="about">
-          <h2>Famous Page Detail</h2>
+          <h2>Famous Place Details</h2>
           <h3>{famousPlace && famousPlace.name}</h3>
         </Col>
       </Row>

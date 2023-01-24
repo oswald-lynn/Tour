@@ -1,3 +1,10 @@
+body {
+  background-color: antiquewhite;
+}
+.textError {
+  text-align: center;
+  padding-top: 3rem;
+}
 h1,
 h2 {
   text-transform: uppercase;
@@ -8,6 +15,7 @@ h2 {
 }
 .img {
   height: 310px;
+  width: 98%;
 }
 .card {
   margin-bottom: 2rem;
@@ -20,4 +28,7 @@ h2 {
 .about {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.errtext {
+  text-align: center;
 }

@@ -1,73 +1,59 @@
-import React from "react";
-import { connect } from "react-redux";
-import { fetchFamousPlace } from "../../actions";
-import { Col, Row } from "antd";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchFamousPlace } from "../actions";
+import { Col, Row, Collapse } from "antd";
+const { Panel } = Collapse;
 
-class FamousPlace extends React.Component {
-  componentDidMount() {
-    const { id } = this.props.match.params;
-    //console.log("Famous Place page", id);
-    this.props.fetchFamousPlace(id);
+const FamousPlace = () => {
+  const { id } = useParams();
+  const famousPlace = useSelector((state) => state.dataDivision.famousPlace);
+  //console.log(famousPlace);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFamousPlace(id));
+  }, [dispatch]);
+
+  if (!famousPlace) {
+    return "Loading ...";
   }
-
-  render() {
-    //console.log(this.props.datas.famousPlaces);
-    const { famousPlace } = this.props;
-    console.log("Rendering famousPage Data>>", famousPlace);
-
-    if (!famousPlace) {
-      return <div>Loading...</div>;
-    } else {
-      const hotels = famousPlace?.hotels?.map((place) => {
-        return (
-          <>
-            <div key={place._id}>
-              <div>Name:{place.name}</div>
-              <div>Address:{place.address}</div>
-              <div>Phone:{place.phone}</div>
-            </div>
-          </>
-        );
-      });
-      return (
-        <>
-          <Row>
-            <Col span={24} className="about">
-              <h2>Famous Page Detail</h2>
-              <h3>{famousPlace.name}</h3>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={12} className="about text">
-              <div>
-                <h3>About</h3>
-                {famousPlace.about}
-              </div>
-              <div>
-                <h3>Transportation</h3>
-                {famousPlace.transportation}
-              </div>
-            </Col>
-            <Col span={12} className="middle">
-              <div>
-                <h3> Hotels </h3>
-                {hotels}
-              </div>
-            </Col>
-          {/* {JSON.stringify(famousPlace)} */}
-        </>
-      );
-    }
-  }
-}
-
-const mapStateToProps = (state, ownProps) => {
-  //console.log("Famoust Page Data", state);
-
-  return {
-    singleDivision: state.divisionReducer.singleDivision,
-    famousPlace: state.divisionReducer.famousPlace,
-  };
+  return (
+    <div>
+      <Row key={famousPlace._id}>
+        <Col md={22} lg={24} className="about">
+          <h2>Famous Place Details</h2>
+          <h3>{famousPlace && famousPlace.name}</h3>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={10} lg={12} className="about text">
+          <div>
+            <h3>About</h3>
+            {famousPlace && famousPlace.about}
+          </div>
+          <div>
+            <h3>Transportation</h3>
+            {famousPlace && famousPlace.transportation}
+          </div>
+        </Col>
+        <Col md={10} lg={12} className="middle">
+          <div>
+            <h3> Hotels </h3>
+            <Collapse accordion>
+              {famousPlace.hotels &&
+                famousPlace.hotels.map((hotel) => (
+                  <Panel header={hotel.name} key={hotel._id}>
+                    <b>Address</b>: {hotel.address} <br />
+                    <b>Phone</b> :{hotel.phone}
+                  </Panel>
+                ))}
+            </Collapse>
+          </div>
+        </Col>
+      </Row>
+    </div>
+  );
 };
 
-export default connect(mapStateToProps, { fetchFamousPlace })(FamousPlace);
+export default FamousPlace;
